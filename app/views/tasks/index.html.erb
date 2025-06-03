@@ -1,0 +1,11 @@
+<div class ="container mt-5 ms-3">
+  <h1>My tasks</h1>
+  <ul class="list-unstyled">
+    <% @tasks.each do |task| %>
+      <li>
+        <%= check_box_tag "", "", task.completed, disabled: true %>
+        <%= link_to task.title, task_path(task) %>
+      </li>
+    <% end %>
+  </ul>
+</div>
